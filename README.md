@@ -1,5 +1,3 @@
-# Welcome to your Lovable project
-
 ## Project info
 
 **URL**: https://satoshville.xyz/dorahacks/doma
@@ -14,8 +12,7 @@ Simply visit the https://satoshville.xyz/dorahacks/doma
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
@@ -60,5 +57,5 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open https://github.com/DDDimatestx/cogent-domain-copy
+Simply open https://github.com/DDDimatestx/doma
 save on your PC and Deploy.
