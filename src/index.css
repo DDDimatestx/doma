@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DomainFluent.ai Design System */
+@layer base {
+  :root {
+    /* Core colors */
+    --background: 240 10% 99%;
+    --foreground: 222 47% 11%;
+
+    /* Primary brand gradient */
+    --primary: 237 88% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 242 87% 55%;
+    
+    /* Secondary colors */
+    --secondary: 240 6% 97%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted colors */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    
+    /* Accent colors */
+    --accent: 198 93% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* UI elements */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 240 6% 90%;
+    --input: 0 0% 100%;
+    --ring: 237 88% 60%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(237 88% 60%), hsl(242 87% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(198 93% 60%), hsl(237 88% 60%));
+    --gradient-background: linear-gradient(180deg, hsl(240 10% 99%), hsl(240 6% 97%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(237 88% 60% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(237 88% 60% / 0.1), 0 2px 4px -1px hsl(237 88% 60% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(237 88% 60% / 0.1), 0 4px 6px -2px hsl(237 88% 60% / 0.05);
+    --shadow-glow: 0 0 40px hsl(237 88% 60% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-background to-secondary min-h-screen text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(237 88% 60% / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(237 88% 60% / 0.4);
+    }
+  }
+}
